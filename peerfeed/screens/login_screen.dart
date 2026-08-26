@@ -49,26 +49,25 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                const SizedBox(height: 40),
-
-                const Text(
-                  'Welcome back!',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
+                const SizedBox(height: 28),
+                Container(
+                  width: 58,
+                  height: 58,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFE0E7FF),
+                    borderRadius: BorderRadius.circular(18),
                   ),
+                  child: const Icon(Icons.groups_rounded, color: Color(0xFF4F46E5), size: 30),
                 ),
-
+                const SizedBox(height: 24),
+                const Text(
+                  'Welcome back',
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.w800, color: Color(0xFF1E1B4B)),
+                ),
                 const SizedBox(height: 8),
-
-                const Text(
-                  'Login to continue to PeerFeed.',
-                  style: TextStyle(
-                    fontSize: 16,
-                  ),
-                ),
-
-                const SizedBox(height: 40),
+                const Text('Sign in to continue learning with your peers.', style: TextStyle(fontSize: 16, color: Color(0xFF64748B))),
+                const SizedBox(height: 36),
 
                 AppTextField(
                   controller: _emailController,
@@ -88,7 +87,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
 
-                const SizedBox(height: 20),
+                const SizedBox(height: 18),
 
                 AppTextField(
                   controller: _passwordController,
@@ -108,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
 
-                const SizedBox(height: 30),
+                const SizedBox(height: 32),
 
                 ElevatedButton(
                   onPressed: _login,
